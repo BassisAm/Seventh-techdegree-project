@@ -8,17 +8,13 @@
 .header {
     display: inline-flex;
     align-items:center;
-    justify-content: flex-end;
+    justify-content: center;
     height: auto;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     background-color: mediumslateblue;
 }
 
-
-.svg {
-    fill-opacity: white;
-}
 
 h1 {
     flex-grow: 1;
@@ -30,21 +26,38 @@ h1 {
 h4 {
     font-size: 0.8rem;
     margin-top: 10px;
-    color: whitesmoke;
+    color: whitesmoke;          
     white-space: nowrap;
 }
 
 
+#bell {
+    width: 25%;
+}
 
 #bell img {
-    height: 3vh;
+    width: 27.5%;
     margin-top: 10px;
+    margin-left: 70%;
 }
+
+
 #profile-pic {
     height: auto;
-    max-width: 15%;
+    width: 10%;
     margin:10px 5px 0;
     border-radius: 50%;
+}
+
+
+@media screen and (min-width:768px) {
+    #bell img {
+        width: 10%;
+        margin-left: 85%;
+    }
+    #profile-pic {
+        width: 5%;
+    }
 }
 
 
@@ -60,7 +73,7 @@ h4 {
 }
 .navigation a img {
     height: 4vh;
-    width: auto;
+    width: 20vw;
     margin: 5px 0;
 }
 
@@ -98,7 +111,7 @@ h3 {
 }
 
 .tab {
-    width: 100%;
+    width: 110%;
     height: 7vh;
     background-color: rgb(241, 241, 241);
     border-bottom: 1px solid grey;
@@ -112,7 +125,18 @@ h3 {
     height: 5vh;
     background-color: mediumslateblue;
     border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-size: small;
 
+}
+
+.alert {
+    display: inline-flex;
+}
+
+.closeButton {
+    margin-left: auto;
 }
 
 
@@ -124,46 +148,60 @@ h3 {
     font-size: 1.3em;
 }
 
-.mobile-users,.daily {
-    height: 25vh;
-    width: auto;
-}
 
-
-.social {
+.medias {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
 }
 
 .social .social-container {
     display: flex;
-    width: auto;
-    height: 30%;
-    padding: 20px;
+    align-items:center;
+    padding: 15px;
+    height: 25%;
     background-color: rgb(241, 241, 241);
     border: 1px solid grey;
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
-.social .social-text p {
-    margin-left: 25px;
-    font-size: 1em;
-}
-
-.social .social-text .count {
-    margin-top: 2px;
-    font-size: 2em;
+.title {
     margin-left: 15px;
+    font-size: 1.25em;
+}
+
+.count {
+    margin-left: 10px;
+    font-size: 2em;
     color: grey;
+    width: auto;
 }
 
 .social-image {
-    align-self: center;
-    width: 75px;
+    width: 25%;
     padding: 15px;
     border-radius: 50%;
     background-color: mediumslateblue;
+}
+
+@media screen and (min-width:768px) {
+    .social-image {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .social-image {
+        width: 25%;
+    }
+}
+
+.social-image img {
+    width: 100%;
 }
 
 
@@ -182,7 +220,7 @@ h3 {
 .profile-image {
     border-radius: 50%;
     margin-bottom: 5px;
-    max-width: 25%;
+    width: 20%;
     height: auto;
 }
 
@@ -215,7 +253,6 @@ h3 {
     height: 50px;
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: white;
 }
 
 .switch-light.switch-material {
@@ -288,16 +325,12 @@ h3 {
     }
 
 
-.main {
-    display: grid;
-}
 
 
 
-
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .main {
+        display: grid;
         grid-template-columns: 50%;
         grid-template-areas:
         "header header"
@@ -309,8 +342,12 @@ h3 {
     .daily, .members, .message {
         grid-column: 1 / span 1;
     }
-    .mobile, .activity, .settings {
+    .mobile-users, .activity, .settings {
         grid-column: 2 / span 1;
+    }
+
+    .medias {
+        flex-direction: row;
     }
     }
 
@@ -319,11 +356,11 @@ h3 {
 .widget-container-full, .widget-container-half {
     width: 95vw;
     }
-    @media (min-width: 768px) {
-    .widget-container-full {
-    width: 90vw;
-    }
-    .widget-container-half {
-    width: 45vw;
-    }
-    }
+@media (min-width: 768px) {
+.widget-container-full {
+width: 90vw;
+}
+.widget-container-half {
+width: 45vw;
+}
+}
