@@ -1,15 +1,4 @@
 
-let alertBanner = document.getElementsByClassName('alert');
-
-
-alertBanner.addEventListener('click', e => {
-    const element = e.target;
-    if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none"
-    }
-    });
-
-
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
@@ -99,3 +88,9 @@ const mobileData = {
         type: 'doughnut',
         data: mobileData,
         });
+
+
+
+
+
+
