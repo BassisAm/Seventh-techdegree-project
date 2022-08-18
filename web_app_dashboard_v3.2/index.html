@@ -20,16 +20,17 @@
       <h4>Student Name</h4>
     </header>
     <nav class="navigation">
-      <a class="nav-link"><img src="svgs/home.svg"></a>
-      <a class="nav-link"><img src="svgs/bar-chart.svg"></a>
-      <a class="nav-link"><img src="svgs/members.svg"></a>
-      <a class="nav-link"><img src="svgs/settings.svg"></a>
+      <a class="nav-link" href="home"><img src="svgs/home.svg"  alt="home"></a>
+      <a class="nav-link" href="charts"><img src="svgs/bar-chart.svg"  alt="charts"></a>
+      <a class="nav-link" href="members"><img src="svgs/members.svg"  alt="members"></a>
+      <a class="nav-link"href="settings"><img src="svgs/settings.svg"  alt="settings"></a>
     </nav>
     <main class="main">
       <div class="main-header">
         <h2 class="headline">Dashboard</h2>
         <div class="tab"></div>
       </div><br>
+
       <div class="alert" >
         <p><strong>Alert:</strong> You have unread messages</p>
         <div class="closeButton">X</div>
@@ -45,6 +46,7 @@
           });
         </script>
         </div>
+
     
 
       <section class="traffic">
@@ -57,7 +59,7 @@
         </div>
         </section><hr><hr>
 
-        
+
         <section class="daily">
           <h3>Daily Traffic</h3>
           <div class="widget-container-half">
@@ -66,6 +68,7 @@
           </div>
           </section><hr class="divider"><hr class="divider">
 
+        
         <section class="mobile-users">
           <h3>Mobile Users</h3>
           <div class="widget-container-half">
@@ -74,13 +77,13 @@
           </div>
 
         </section><hr><hr>
-        
+
         <section class="social">
           <h3>Social Stats</h3>
           <div class="medias">
           <div class="social-container">
           <div class="social-image">
-            <img src="svgs/facebook.svg">
+            <img src="svgs/facebook.svg" alt="facebook">
           </div>
           <div class="social-text">
           <p class="title">Facebook</p>
@@ -89,7 +92,7 @@
           </div>
           <div class="social-container">
             <div class="social-image">
-              <img src="svgs/instagram.svg">
+              <img src="svgs/instagram.svg" alt="instagram">
             </div>
             <div class="social-text">
             <p class="title">Instagram</p>
@@ -98,7 +101,7 @@
             </div>
           <div class="social-container">
             <div class="social-image">
-              <img src="svgs/twitter.svg">
+              <img src="svgs/twitter.svg" alt="twitter">
             </div>
             <div class="social-text">
             <p class="title">Twitter</p>
@@ -107,12 +110,13 @@
             </div>
           </div>
         </section><hr><hr>
+        
 
         <section class="members">
           <h3>New Members</h3>
           <div class="members-container">
           <img src="images/member-1.jpg"  
-          class="profile-image">
+          class="profile-image" alt="member 1">
           <div class="members-text">
           <p>Victoria Chambers</p>
           <a href="#">victoria.chambers80@example.com</a>
@@ -121,7 +125,7 @@
           </div>
           <div class="members-container">
             <img src="images/member-2.jpg"  
-            class="profile-image">
+            class="profile-image"  alt="member 2">
             <div class="members-text">
             <p>Dale Byrd</p>
             <a href="#">dale.byrd52@example.com</a>
@@ -130,7 +134,7 @@
             </div>
           <div class="members-container">
             <img src="images/member-3.jpg"  
-            class="profile-image">
+            class="profile-image"  alt="member 3">
             <div class="members-text">
             <p>Dawn Wood</p>
             <a href="#">dawn.wood16@example.com</a>
@@ -140,7 +144,7 @@
           <div class="members-container">
             <img src="images/member-4.jpg"  
             class="profile-image">
-            <div class="members-text">
+            <div class="members-text"  alt="member 4">
             <p>Dan Oliver</p>
             <a href="#">dan.oliver82@example.com</a>
             </div>
@@ -148,11 +152,12 @@
             </div>
         </section>
 
+
         <section class="activity">
           <h3>Recent Activity</h3>
           <div class="members-container">
           <img src="images/member-1.jpg"  
-          class="profile-image">
+          class="profile-image"  alt="member 1">
           <div class="members-text">
           <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
           <p>4 hours ago</p>
@@ -161,7 +166,7 @@
           </div>
           <div class="members-container">
             <img src="images/member-2.jpg"  
-            class="profile-image">
+            class="profile-image"  alt="member 2">
             <div class="members-text">
             <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
             <p>5 hours ago</p>
@@ -170,7 +175,7 @@
             </div>
           <div class="members-container">
             <img src="images/member-3.jpg"  
-            class="profile-image">
+            class="profile-image"  alt="member 3">
             <div class="members-text">
             <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong></p>
             <p>5 hours ago</p>
@@ -179,7 +184,7 @@
             </div>
           <div class="members-container">
             <img src="images/member-4.jpg" 
-            class="profile-image">
+            class="profile-image"  alt="member 4">
             <div class="members-text">
             <p>Dan Olive posted <strong>WebApp's SEO Tips</strong></p>
             <p>1 day ago</p>
@@ -201,6 +206,7 @@
           <button class="button-primary" id="send" >Send</button><br>
           </form>
         </section>
+
 
         <section class="settings">
           <h3>Settings</h3>
@@ -281,6 +287,7 @@
           <button class="button-disabled" id="cancel">Cancel</button>
           </div>
           </section>
+
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
