@@ -1,23 +1,29 @@
+const alertBanner = document.getElementById("alert");
+
 
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
-send.addEventListener('click', () => {
-
-if (user.value === "" && message.value === "") {
-alert("Please fill out user and message fields before sending");
-} else if (user.value === "" ) {
-alert("Please fill out user field before sending");
-} else if (message.value === "" ) {
-alert("Please fill out message field before sending");
-} else {
-alert(`Message successfully sent to: ${user.value}`);
-}
-});
-
-
 let trafficCanvas = document.getElementById("traffic-chart");
+const dailyCanvas = document.getElementById("daily-chart");
+const mobileCanvas = document.getElementById("mobile-users-chart");
+
+alertBanner.innerHTML =
+`
+<div class="alert-banner">
+<p><strong>Alert:</strong> You have unread messages</p>
+<p class="closeButton">x</p>
+</div>
+`
+alertBanner.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains("closeButton")) {
+    alertBanner.style.display = "none"
+    }
+    });
+
+
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -41,7 +47,7 @@ let trafficChart = new Chart(trafficCanvas, {
 
 
 
-const dailyCanvas = document.getElementById("daily-chart");
+
 
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
@@ -68,7 +74,7 @@ let dailyChart = new Chart(dailyCanvas, {
 
 
 
-const mobileCanvas = document.getElementById("mobile-users-chart");
+
 
 const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],
@@ -93,4 +99,15 @@ const mobileData = {
 
 
 
+send.addEventListener('click', () => {
 
+if (user.value === "" && message.value === "") {
+alert("Please fill out user and message fields before sending");
+} else if (user.value === "" ) {
+alert("Please fill out user field before sending");
+} else if (message.value === "" ) {
+alert("Please fill out message field before sending");
+} else {
+alert(`Message successfully sent to: ${user.value}`);
+}
+});

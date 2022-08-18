@@ -5,6 +5,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+img[src='svgs'] path{
+    fill:red
+  }
 /*==============================================*/
 /* MOBILE STYLES */
 /*==============================================*/
@@ -42,6 +45,9 @@ h4 {
     width: 25%;
 }
 
+#bell img:hover {
+    opacity: 70%;
+}
 #bell img {
     width: 27.5%;
     margin-top: 10px;
@@ -109,11 +115,11 @@ h3 {
     border-left: 1px solid grey;
 }
 
-.alert,
+.alert-banner,
 #send{
     margin: 20px 0 15px;
     width: 100%;
-    height: 5vh;
+    height: 6.5vh;
     background-color: mediumslateblue;
     border-radius: 5px;
     color: white;
@@ -123,9 +129,11 @@ h3 {
 }
 
 
-.alert {
+.alert-banner {
     display: inline-flex;
+    align-items: center;
 }
+
 
 .closeButton {
     margin-left: auto;
@@ -184,7 +192,7 @@ h3 {
 .profile-image {
     border-radius: 50%;
     margin: 10px 0;
-    width: 15%;
+    width: 22.5%;
     height: auto;
 }
 
@@ -290,7 +298,7 @@ h3 {
 
 @media screen and (min-width:768px) {
     .social-image {
-        width: 30%;
+        width: 40%;
     }
     .navigation {
         flex-direction: column;
@@ -305,6 +313,32 @@ h3 {
     #profile-pic {
         width: 5%;
     }
+    .medias {
+        flex-direction: row;
+    }
+    .divider {
+        display: none;
+    }
+    .daily {
+        border-right: 2px solid grey;
+    }
+    .mobile-users {
+        margin-left: 10px;
+    }
+    .members-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+
+    }
+    .profile-image {
+        width:12%;
+        margin-right: 20px;
+    }
+    .date,
+    .arrow {
+        margin-left: auto;
+    }
 }
 
 
@@ -314,9 +348,7 @@ h3 {
 /*==============================================*/
 
 @media screen and (min-width: 1024px) {
-    .medias {
-        flex-direction: row;
-    }
+
     .members,.daily,.message {
         border-right: 2px solid grey;
     }
@@ -331,21 +363,22 @@ h3 {
         text-align: left;
         height: 12.5vh;
     }
+    #bell img {
+        width: 7%;
+        margin-left: 92%;
+    }
 
+    #profile-pic {
+        width: 3.2%;
+        margin-right: 20px;
+    }
     .arrow {
         display: block;
     }
     .profile-image {
         margin-right: 10px;
     }
-    .date,
-    .arrow {
-        margin-left: auto;
-    }
 
-    .divider {
-        display: none;
-    }
 
     .social-image {
         width: 25%;
@@ -389,7 +422,7 @@ h3 {
     display: grid;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .main {
         display: grid;
         grid-template-columns: 50%;
@@ -397,6 +430,25 @@ h3 {
         "header header"
         "navigation main";
     }
+    .main-header, .alert {
+        grid-column: 1 / span 2;
+    }
+    .traffic, .social {
+        grid-column: 1 / span 2;
+    }
+    .mobile-users {
+        grid-column: 2 / span 1;
+    }
+    .daily {
+        grid-column: 1 / span 1;
+    }
+    .members,.activity,.message,.settings {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+
 
     .main-header, .alert {
         grid-column: 1 / span 2;
