@@ -36,10 +36,30 @@ let trafficData = {
     }]
     };
 
+let trafficOptions = {
+    backgroundColor: 'rgba(112, 104, 201, .5)',
+    fill: true,
+    aspectRatio: 2.5,
+    animation: {
+    duration: 0
+    },
+    scales: {
+    y: {
+    beginAtZero: true
+    }
+    },
+    plugins: {
+    legend: {
+    display: false
+    }
+    }
+    };
+
     
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData
+    data: trafficData,
+    options: trafficOptions
     });
 
 
@@ -59,9 +79,23 @@ const dailyData = {
     }]
     };
 
+const dailyOptions = {
+    scales: {
+    y: {
+    beginAtZero: true
+    }
+    },
+    plugins: {
+    legend: {
+    display: false
+    }
+    }
+    };
+
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
     data: dailyData,
+    options: dailyOptions
     });
 
 
@@ -90,10 +124,25 @@ const mobileData = {
     }]
     };
 
-    let mobileChart = new Chart(mobileCanvas, {
-        type: 'doughnut',
-        data: mobileData,
-        });
+
+const mobileOptions = {
+    aspectRatio: 1.9,
+    plugins: {
+    legend: {
+    position: 'right',
+    labels: {
+    boxWidth: 20,
+    fontStyle: 'bold'
+    }
+    }
+    }
+    };
+
+let mobileChart = new Chart(mobileCanvas, {
+    type: 'doughnut',
+    data: mobileData,
+    options: mobileOptions
+    });
 
 
 
