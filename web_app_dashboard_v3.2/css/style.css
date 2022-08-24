@@ -52,7 +52,7 @@ h4 {
 }
 #bell img {
     width: 35%;
-    margin-top: 20%;
+    margin-top: 25%;
     margin-left: auto;
 }
 
@@ -318,7 +318,7 @@ h3 {
     #bell img {
         width: 10%;
         margin-left: 85%;
-        align-self: flex-start;
+        margin-top: 5%;
     }
     #profile-pic {
         width: 5%;
@@ -384,7 +384,7 @@ h3 {
     }
     #bell img {
         width: 7%;
-        margin-left: 92%;
+        margin-left: 90%;
     }
 
     #profile-pic {
