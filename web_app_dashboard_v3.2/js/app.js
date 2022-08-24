@@ -9,6 +9,12 @@ let trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-users-chart");
 
+var element = document.getElementById('traffic-chart');
+
+element.style.width = '75%';
+element.style.height = null;
+
+
 alertBanner.innerHTML =
 `
 <div class="alert-banner">
