@@ -355,9 +355,7 @@ h3 {
         margin-right: 60%;
         align-self: center;
     }
-    .switch-light {
-        height: 18.5%;
-    }
+
 }
 
 
@@ -402,6 +400,9 @@ h3 {
     }
     .toggle {
         margin-right: 40%;
+    }
+    .switch-light {
+        height: 18.5%;
     }
 }
 

@@ -58,14 +58,15 @@ let trafficOptions = {
     legend: {
     display: false
     }
-    }
+    },
+    tension: 0.5
     };
 
     
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
-    options: trafficOptions
+    options: trafficOptions,
     });
 
 
